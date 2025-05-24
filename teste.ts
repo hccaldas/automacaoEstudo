@@ -1,0 +1,32 @@
+import { test, expect } from '@playwright/test';
+
+test('test', async ({ page }) => {
+  await page.goto('https://www.gov.br/pt-br');
+  await page.getByRole('button', { name: 'Entrar com gov.br' }).click();
+  await page.getByRole('textbox', { name: 'Digite seu CPF' }).click();
+  await page.getByRole('textbox', { name: 'Digite seu CPF' }).fill('062.957.041-82');
+  await page.getByRole('button', { name: 'Continuar' }).click();
+  await page.locator('iframe[title="Conteúdo principal do desafio hCaptcha"]').contentFrame().getByRole('button', { name: 'Avançar' }).click();
+  await page.locator('iframe[title="Conteúdo principal do desafio hCaptcha"]').contentFrame().getByRole('button', { name: 'Avançar' }).click();
+  await page.locator('iframe[title="Conteúdo principal do desafio hCaptcha"]').contentFrame().getByRole('button', { name: 'Imagem do desafio 2' }).click();
+  await page.locator('iframe[title="Conteúdo principal do desafio hCaptcha"]').contentFrame().getByRole('button', { name: 'Imagem do desafio 7' }).click();
+  await page.locator('iframe[title="Conteúdo principal do desafio hCaptcha"]').contentFrame().getByRole('button', { name: 'Imagem do desafio 6' }).click();
+  await page.locator('iframe[title="Conteúdo principal do desafio hCaptcha"]').contentFrame().getByRole('button', { name: 'Imagem do desafio 4' }).click();
+  await page.locator('iframe[title="Conteúdo principal do desafio hCaptcha"]').contentFrame().getByRole('button', { name: 'Próximo teste de segurança' }).click();
+  await page.locator('iframe[title="Conteúdo principal do desafio hCaptcha"]').contentFrame().getByRole('button', { name: 'Imagem do desafio 6' }).click();
+  await page.locator('iframe[title="Conteúdo principal do desafio hCaptcha"]').contentFrame().getByRole('button', { name: 'Imagem do desafio 9' }).click();
+  await page.locator('iframe[title="Conteúdo principal do desafio hCaptcha"]').contentFrame().getByRole('button', { name: 'Imagem do desafio 8' }).click();
+  await page.locator('iframe[title="Conteúdo principal do desafio hCaptcha"]').contentFrame().getByRole('button', { name: 'Verificar respostas' }).click();
+  await page.getByRole('textbox', { name: 'Digite seu CPF' }).click();
+  await page.getByRole('textbox', { name: 'Digite seu CPF' }).fill('062.957.041-82');
+  await page.getByRole('button', { name: 'Continuar' }).click();
+  await page.locator('iframe[title="Conteúdo principal do desafio hCaptcha"]').contentFrame().getByRole('button', { name: 'Imagem do desafio 3' }).click();
+  await page.locator('iframe[title="Conteúdo principal do desafio hCaptcha"]').contentFrame().getByRole('button', { name: 'Imagem do desafio 6' }).click();
+  await page.locator('iframe[title="Conteúdo principal do desafio hCaptcha"]').contentFrame().getByRole('button', { name: 'Imagem do desafio 9' }).click();
+  await page.locator('iframe[title="Conteúdo principal do desafio hCaptcha"]').contentFrame().getByRole('button', { name: 'Imagem do desafio 7' }).click();
+  await page.locator('iframe[title="Conteúdo principal do desafio hCaptcha"]').contentFrame().getByRole('button', { name: 'Próximo teste de segurança' }).click();
+  await page.locator('iframe[title="Conteúdo principal do desafio hCaptcha"]').contentFrame().getByRole('button', { name: 'Imagem do desafio 6' }).click();
+  await page.locator('iframe[title="Conteúdo principal do desafio hCaptcha"]').contentFrame().getByRole('button', { name: 'Imagem do desafio 9' }).click();
+  await page.locator('iframe[title="Conteúdo principal do desafio hCaptcha"]').contentFrame().getByRole('button', { name: 'Imagem do desafio 1' }).click();
+  await page.locator('iframe[title="Conteúdo principal do desafio hCaptcha"]').contentFrame().getByRole('button', { name: 'Verificar respostas' }).click();
+});
